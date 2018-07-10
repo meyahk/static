@@ -1,0 +1,73 @@
+// ========================================================================
+// BASE/RESET
+// ========================================================================
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// remove margins and padding
+
+body,
+fieldset,
+figure,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+dl,
+dd,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+// reset font size and weight
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+small {
+    font-size: 80%;
+    line-height: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+// forms
+
+fieldset {
+    border: none;
+}
+
+// Use stie font and set cursor
+
+button,
+input,
+select {
+    font: inherit;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}

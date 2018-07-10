@@ -1,0 +1,77 @@
+// ========================================================================
+// COMPONENTS/TAB NAVIGATION
+// ========================================================================
+
+.c-tab {
+    &-nav {
+        li {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(0, 0, 0, 0.8);
+
+            a {
+                color: #fff;
+                font-size: 20px;
+                line-height: initial;
+            }
+
+            &.active {
+                background: rgba(255, 255, 255, 0.8);
+
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    &_content {
+        padding: 13px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    &__filter {
+        position: relative;
+
+        &-panel {
+            display: none;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        &-item {
+            padding: 20px;
+        }
+
+        &-trigger {
+            position: absolute;
+            bottom: -41px;
+
+            @include horizontal-align;
+
+            width: 270px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 0 0 3px 3px;
+
+            &-icon {
+                @include box-size-set(10,10);
+            }
+
+            &--active {
+                ~ .c-tab__filter-panel {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//.c-tab_content_item:not(:target) {
+//    display: none;
+//}
+
+//.c-tab_content_item:target {
+//    display: block;
+//}

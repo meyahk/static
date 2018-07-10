@@ -1,1 +1,3 @@
 # static
+
+yarn install

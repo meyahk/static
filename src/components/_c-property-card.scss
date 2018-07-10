@@ -1,0 +1,27 @@
+// ========================================================================
+// COMPONENTS/PROPERTY CARD
+// ========================================================================
+
+.property-card {
+    height: 308px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #777;
+    border: 1px solid #ddd;
+
+    &__hotel-name {
+        font-size: 14px;
+        font-weight: 700;
+        color: #555;
+    }
+
+    &__image {
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 10px;
+        height: 137px;
+        overflow: hidden;
+    }
+}

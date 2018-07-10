@@ -1,0 +1,43 @@
+// ========================================================================
+// COMPONENTS/Become Host
+// ========================================================================
+
+.c-become-host {
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.4);
+
+    @include ltr {
+        padding-right: 40px;
+    }
+
+    @include rtl {
+        padding-left: 40px;
+    }
+
+    &__anchor {
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+
+        @include vertical-align;
+
+        @include ltr {
+            right: 10px;
+        }
+
+        @include rtl {
+            left: 10px;
+            -ms-transform: scale(-1, 1) translateY(-50%);
+            -webkit-transform: scale(-1, 1) translateY(-50%);
+            transform: scale(-1, 1) translateY(-50%);
+        }
+
+        fill: #fff;
+    }
+}

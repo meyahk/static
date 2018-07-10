@@ -1,0 +1,28 @@
+# Footer spec
+
+@objects
+    footer                            .l-footer
+    footer-container                  .l-footer__container
+    footer-text                       .l-footer p
+    footer-partner                    .l-footer__partner-list
+    footer-site-server                .l-footer__server
+
+@groups
+    footer-childs           footer-text, footer-partner, footer-partner, footer-site-server
+
+= footer =
+    &footer-childs:
+        centered horizontally inside footer-container
+
+    footer-container:
+        centered horizontally inside footer top bottom ~50px
+    
+    footer-text:
+        above footer-partner ~ 30px
+        css font-size is "14px"
+
+    footer-partner:
+        below footer-text 
+        above footer-site-server  30 to 40 px
+        component components/partner.gspec
+    

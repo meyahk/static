@@ -1,0 +1,31 @@
+// ========================================================================
+// MIXINS/GRID-WIDTHS
+// ========================================================================
+
+// This will loop through each breakpoint and generate a new class to be added to the markup 
+// to show how much that elements spans at what breakpoint or how much offset an element has.
+
+// Usage
+// @include grid-widths($at + "bp" + $bp)
+
+@mixin grid-widths($type, $namespace: "") {
+    @for $i from 1 through $grid-columns {
+        @if ($type == 'widths') {
+            .l-col-#{$i}#{$namespace} {
+                width: (100% / $grid-columns) * $i;
+            }
+        }
+
+        @if ($type == 'offset') {
+            .l-col-offset-#{$i}#{$namespace} {
+                @include ltr {
+                    margin-left: percentage(($i / $grid-columns));
+                }
+
+                @include rtl {
+                    margin-right: percentage(($i / $grid-columns));
+                }
+            }
+        }
+    }
+}

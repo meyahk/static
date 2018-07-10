@@ -1,0 +1,58 @@
+@objects
+    hero-banner                         css         .c-hero-banner
+    hero-container                      css         .c-hero-banner__container
+    become-host                         css         .c-become-host
+    hero-title                          css         .c-hero-banner__title
+    hero-text                           css         .c-hero-banner__text
+    hero-tab-navigation                 css         .c-hero-banner__tab
+    hero-tab-content                    css         .c-tab_content
+    search-box                          css         .c-searchbox__box
+    search-feild-item-*                 css         .c-searchbox__item
+    search-icon                         css         .c-searchbox__icon
+    filter-col                          css         .c-tab__filter-panel .l-col-4
+    filter-item-*                       css         .c-tab__filter-item
+
+
+
+= Hero banner Section =
+    hero-banner:
+        width = 100% of screen/width
+ 
+    hero-container:
+        centered horizontally inside hero-banner
+
+    become-host:
+        inside screen 0 to 1 px right
+
+    hero-title:
+        above hero-text 0 to 10 px
+        centered horizontally inside hero-banner
+    
+    hero-text:
+        below hero-title 0 to 10 px
+        above hero-tab-navigation  0 to 10 px
+        centered horizontally inside hero-banner
+
+= Search box =  
+    @forEach [ search-feild-item-* ] as searchInput, next as nextInput
+        ${searchInput}:   
+            left-of ${nextInput} ~ 3px
+            aligned horizontally all ${nextInput}
+
+= filter =
+    @forEach [ filter-item-* ] as filterItem, next as nextfilterItem
+        ${filterItem}:
+            left-of ${nextfilterItem} 20 to 25 px
+            aligned horizontally all ${nextfilterItem}
+
+
+
+
+        
+
+    
+            
+    
+
+
+

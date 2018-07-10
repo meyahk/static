@@ -1,0 +1,22 @@
+// ========================================================================
+// BASE/PAGE
+// ========================================================================
+
+// min-height - Ensures the page fills at least the entire height of the viewport
+// font-size - Set to 100%, this allows the site to adapt to the font size being used by the browser instead of forcing this value on the user
+// font-family -  Set to allow the font to cascade to all elements
+// line-height -  For overall site line height and vertical rhytym, should be a unitless value
+// color - Set for all text elements
+// background-color - Set for page background colour
+// -ms/-webkit - Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+
+html {
+    min-height: 100%;
+    font-size: 100%; //$font-size
+    font-family: mallory, "Helvetica Neue", Helvetica, Arial, sans-serif; //$font-family
+    line-height: 100%; //$line-height
+    //color: color(black, primary);
+    background-color: white;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}

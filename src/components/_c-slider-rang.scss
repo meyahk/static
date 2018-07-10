@@ -1,0 +1,34 @@
+// ========================================================================
+// COMPONENTS/SLIDER RANG
+// ========================================================================
+
+//usage use JS to handle position of thumb and bar
+.c-slider {
+    &__bar {
+        position: relative;
+        width: 100%;
+        height: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: #aaa;
+
+        &--filled {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background-color: #0283df;
+        }
+    }
+
+    &__thumb {
+        position: absolute;
+
+        @include box-size-set(20,20);
+        @include vertical-align;
+
+        background-color: #fff;
+        border: 1px solid #0283df;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

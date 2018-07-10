@@ -1,0 +1,61 @@
+// ========================================================================
+// COMPONENTS/BOOK FASTER SECTION
+// ========================================================================
+
+.c-book-faster {
+    text-align: center;
+
+    &__container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        width: calc(100% - 30%);
+        margin: 0 auto;
+        color: #777;
+        line-height: 1.5;
+    }
+
+    &__video {
+        max-width: 980px;
+        height: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 20px 15px -10px #aaa;
+    }
+
+    &__button {
+        display: block;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .c-val {
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        &prop {
+            @include ie9 {
+                display: inline-block;
+            }
+
+            margin-top: spacing(3);
+            margin-bottom: spacing(3);
+
+            &--best-price {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import lib/base-rules.gspec
+
+@objects
+	exp								 .kite
+    header                           .l-siteHeader
+
+@rule @if %{experiment} is visible
+		${isVisible(experiment)}
+		${objectName}:
+			@ruleBody
+
+= Header =
+	| if exp is visible
+		header:
+			height 100px
+

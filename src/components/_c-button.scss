@@ -1,0 +1,14 @@
+// ========================================================================
+// COMPONENTS/BUTTON
+// ========================================================================
+
+.button {
+    border: none;
+    border-radius: 3px;
+
+    &--primary {
+        background-color: #488bf8;
+        color: #fff;
+        box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+}

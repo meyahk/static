@@ -1,0 +1,15 @@
+# Property card
+
+@objects
+    property-card                          .property-card
+    property-card-image                    .property-card__image
+    property-card-detail                   .property-card__detail
+
+
+= Property card =
+    property-card-image:
+        height = 137px
+        above property-card-detail = 10px
+        
+    property-card-detail:
+        below property-card-image = 10px

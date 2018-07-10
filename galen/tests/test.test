@@ -1,0 +1,19 @@
+@@ set 
+    domain          http://localhost:3000
+    path            galen/specs/
+
+@@ table devices
+    |device|        |tags|          |size|
+    |normal|        |normal|        |1280x800|
+    |small|         |small|         |980x1080|
+
+@@ parameterized using devices
+Home page on ${devices} device
+    selenium chrome ${domain} ${size}
+        check   ${path}skeleton.gspec
+        check   ${path}header.gspec
+        check   ${path}herobanner.gspec
+        check   ${path}bookfaster.gspec
+        check   ${path}recently-viewed.gspec
+        check   ${path}recently-search.gspec --include ${tags}
+        check   ${path}footer.gspec

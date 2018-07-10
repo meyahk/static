@@ -1,0 +1,39 @@
+{
+  "name": "agoda-playground",
+  "version": "1.0.0",
+  "description": "Galen Test Project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/meyahk/static.git"
+  },
+  "keywords": [
+    "SASS",
+    "Architecture"
+  ],
+  "author": "Kobkul Photiprasit",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "browser-sync": "^2.18.13",
+    "http-server": "^0.10.0",
+    "node-sass": "^4.6.1",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^4.1.1",
+    "postcss-focus": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "postcss-vr": "^3.0.1",
+    "rimraf": "^2.6.2",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "stylelint": "stylelint src/**/*.scss",
+    "sass": "node-sass --source-map=true src/main.scss -o dist",
+    "build": "yarn run stylelint && yarn run sass",
+    "watch": "onchange \"src/**/*.scss\" -- yarn run build",
+    "serve": "browser-sync start --server --files \"dist/*.css\"",
+    "start": "yarn run build && yarn run serve \"yarn run watch\""
+  }
+}

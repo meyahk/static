@@ -1,0 +1,13 @@
+// ========================================================================
+// SETTINGS/SPACINGS
+// ========================================================================
+
+$range: 8;
+$multiplier: ($line-height-px / $font-size-px) / ($range / 2) * 1rem;
+
+$spacings: ();
+
+@for $i from 1 through $range {
+    $ranges: ($i: $multiplier * $i);
+    $spacings: map-merge($spacings, $ranges);
+}

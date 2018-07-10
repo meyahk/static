@@ -1,0 +1,23 @@
+# RECENTLY SEARCH
+
+@objects
+    section                                     .c-recently-viewed
+    recently-item-*                             .c-recently-search__item
+
+
+= Recently Search =
+    section:
+        count visible recently-item-* is 3
+
+    @forEach [ recently-item-* ] as recentlyItem, next as nextRecently
+        ${recentlyItem}:
+            @on *
+                component components/overlay.gspec
+
+            @on desktop, normal
+                left-of ${nextRecently} ~ 11px
+                aligned horizontally all ${nextRecently}
+
+            @on small
+            	width 45 to 50% of section/width
+    

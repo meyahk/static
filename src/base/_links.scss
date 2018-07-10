@@ -1,0 +1,27 @@
+// ========================================================================
+// BASE/LINKS
+// ========================================================================
+
+// Set default colour
+// Remove the gray background on active links in IE 10.
+// Set text decoration
+
+a {
+    color: #488bf8;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:visited {
+        color: #b5d2ff;
+    }
+
+    &:hover {
+        color: #488bf8;
+    }
+
+    &:active,
+    &:focus {
+        color: #488bf8;
+    }
+}

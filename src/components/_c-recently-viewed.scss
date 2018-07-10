@@ -1,0 +1,31 @@
+// ========================================================================
+// COMPONENTS/RECENTLY VIEWED PROPERTY
+// ========================================================================
+
+.c-recently-viewed {
+    &__title {
+        @include vr(20px, 1, 1);
+
+        text-align: center;
+    }
+
+    [class*="l-col-"] {
+        @include ltr {
+            padding-left: spacing(2);
+        }
+
+        @include rtl {
+            padding-right: spacing(2);
+        }
+    }
+
+    &__property {
+        position: relative;
+        padding-bottom: 50px;
+
+        &-footer {
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+}

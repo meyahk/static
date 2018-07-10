@@ -1,0 +1,19 @@
+# valProp SPEC
+
+@objects
+    valProp                                             article.c-valprop
+    valProp-title                                       .c-valprop > h4
+    valProp-text                                        .c-valprop > p
+
+= valProp =
+    valProp-title:
+        centered horizontally inside parent
+        inside parent ~ 110px top
+        inside parent >= 0 px left right
+        css font-size is "16px"
+        above valProp-text ~ 10px
+    
+    valProp-text:
+        centered horizontally inside parent
+        inside parent  >= 50px bottom
+        inside parent >= 0 px left right

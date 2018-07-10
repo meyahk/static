@@ -1,0 +1,65 @@
+// ========================================================================
+// COMPONENTS/SITE DROPDOWN
+// ========================================================================
+
+.c-menu-dropdown {
+    padding: 0 10px;
+    background: #333;
+
+    &-item {
+        position: relative;
+    }
+
+    &-label {
+        //position: relative;
+        display: block;
+        padding: 0 18px 0 12px;
+        cursor: pointer;
+
+        &:hover {
+            background: red;
+        }
+    }
+
+    &-input {
+        &:checked {
+            ~ .c-menu-dropdown-label {
+                background: red;
+            }
+
+            ~ .c-menu-dropdown_submenu {
+                max-height: 300px;
+                transition: max-height 0.5s ease-in;
+            }
+        }
+
+        display: none;
+    }
+
+    &_submenu {
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+        background: pink;
+        transition: max-height 0.5s ease-out;
+        position: absolute;
+        min-width: 100%;
+
+        li {
+            a {
+                display: block;
+                padding: 12px;
+                color: red;
+                text-decoration: none;
+                box-shadow: 0 -1px rgba(0, 0, 0, 0.5) inset;
+                transition: background 0.3s;
+                white-space: nowrap;
+
+                &:hover {
+                    background: yellow;
+                }
+            }
+        }
+    }
+}

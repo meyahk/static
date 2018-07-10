@@ -1,0 +1,50 @@
+// ======================================================================== 
+// COMPONENTS/VIDEO 
+// ======================================================================== 
+
+.c-video {
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 0;
+        padding: 15px;
+
+        &-anchor {
+            color: #fff;
+        }
+    }
+
+    &__icon {
+        @include box-size-set(50,50);
+
+        fill: #212121;
+        fill-opacity: 0.8;
+    }
+
+    &__play {
+        position: absolute;
+
+        @include vertical-centered;
+
+        border: none;
+        background: none;
+
+        &:hover {
+            .c-video__icon {
+                fill: red;
+                fill-opacity: 1;
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-position: center;
+    }
+}

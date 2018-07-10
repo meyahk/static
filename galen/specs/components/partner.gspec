@@ -1,0 +1,10 @@
+# PARTNER
+
+@objects
+    partner-item-*                              .c-partner__item
+
+= Partner list =
+    @forEach [ partner-item-* ] as partnerItem, next as nextPartner
+        ${partnerItem}:
+            left-of ${nextPartner} >= 10px
+            aligned horizontally all ${nextPartner}

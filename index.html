@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9" dir="ltr"> <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AGODA PLayground</title>
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+
+<body class="kite">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-arrow-down" viewBox="0 0 64 64">
+                <title>arrow-down</title>
+                <path d="M64 16l-32 32-31.8-32z"></path>
+            </symbol>
+            <symbol id="icon-cities" viewBox="0 0 64 64">
+                <title>cities</title>
+                <path d="M63.2 34.4l-17.2-10.2c-0.4-0.2-1-0.2-1.4 0l-10 6v-26c0-1.6-1.4-2.8-3-2.8h-28.6c-1.6 0-3 1.2-3 2.8v55.8c0 1.6 1.4 2.8 3 2.8h59.4c0.8 0 1.4-0.6 1.4-1.4v-25.4c0-0.6-0.2-1-0.6-1.6zM14.6 28.8c0 0.4-0.4 0.6-0.6 0.6h-5.4c-0.4 0-0.6-0.2-0.6-0.6v-5.2c0-0.4 0.4-0.6 0.6-0.6h5.4c0.4 0 0.6 0.2 0.6 0.6v5.2zM14.6 16.2c0 0.4-0.4 0.6-0.6 0.6h-5.4c-0.4-0.2-0.6-0.4-0.6-0.6v-5.2c0-0.4 0.4-0.6 0.6-0.6h5.4c0.4 0 0.6 0.2 0.6 0.6v5.2zM27.4 28.8c0 0.4-0.4 0.6-0.6 0.6h-5.4c-0.4 0-0.6-0.2-0.6-0.6v-5.2c0-0.4 0.2-0.6 0.6-0.6h5.4c0.4 0 0.6 0.2 0.6 0.6v5.2zM27.4 16.2c0 0.4-0.4 0.6-0.6 0.6h-5.4c-0.4 0-0.6-0.2-0.6-0.6v-5.2c0-0.4 0.2-0.6 0.6-0.6h5.4c0.4 0 0.6 0.2 0.6 0.6v5.2zM43 44.8c0 0.4-0.2 0.6-0.6 0.6h-5.2c-0.4 0-0.6-0.2-0.6-0.6v-5.2c0-0.4 0.2-0.6 0.6-0.6h5.2c0.4 0 0.6 0.2 0.6 0.6v5.2zM56.2 44.8c0 0.4-0.2 0.6-0.6 0.6h-5.2c-0.4 0-0.6-0.2-0.6-0.6v-5.2c0-0.4 0.2-0.6 0.6-0.6h5.2c0.4 0 0.6 0.2 0.6 0.6v5.2z"></path>
+            </symbol>
+            <symbol id="icon-check-in" viewBox="0 0 64 64">
+                <title>check-in</title>
+                <path d="M55.6 3.6h-7v-2c0-0.8-0.6-1.4-1.4-1.4s-1.4 0.6-1.4 1.4v1.8h-27.4v-1.8c0-0.8-0.6-1.4-1.4-1.4-1 0-1.6 0.6-1.6 1.4v1.8h-7c-4.6 0-8.2 3.6-8.2 8.2v18.4c0 0.8 0.6 1.4 1.4 1.4s1.4-0.6 1.4-1.4v-8.2h57.6v33.8c0 2.8-2.4 5.2-5.2 5.2h-47c-2.8 0-5.2-2.4-5.2-5.2v-5.6c0-0.8-0.6-1.4-1.4-1.4s-1.4 0.6-1.4 1.4v5.6c0 4.6 3.6 8.2 8.2 8.2h47.2c4.6 0 8.2-3.6 8.2-8.2v-43.8c-0.2-4.6-3.8-8.2-8.4-8.2zM60.8 18.8h-57.6v-7c0-2.8 2.4-5.2 5.2-5.2h7v1.8c0 0.8 0.6 1.6 1.4 1.6s1.4-0.6 1.4-1.4v-2h27.4v1.8c0 0.8 0.6 1.4 1.4 1.4s1.4-0.6 1.4-1.4v-1.8h7c2.8 0 5.2 2.4 5.2 5.2v7z"></path>
+                <path d="M0.2 40.4c0 0.8 0.6 1.4 1.4 1.4h17.2l-4.8 6c-0.6 0.6-0.4 1.6 0.2 2.2 0.2 0.2 0.6 0.4 1 0.4s0.8-0.2 1.2-0.6l6.6-8.4c0.2-0.2 0.4-0.6 0.4-1 0 0 0 0 0 0 0-0.6-0.2-1-0.6-1.2l-6.4-8.2c-0.6-0.6-1.4-0.8-2.2-0.2-0.6 0.6-0.8 1.4-0.2 2.2l4.8 6h-17.2c-0.8 0-1.4 0.6-1.4 1.4z"></path>
+            </symbol>
+            <symbol id="icon-check-out" viewBox="0 0 64 64">
+                <title>check-out</title>
+                <path d="M62.2 51.4c-1 0-1.4 0.8-1.4 1.6v2.6c0 2.8-2.4 5-5.2 5h-47.2c-2.8 0-5.2-2.2-5.2-5v-34h57.6v5.2c0 0.8 0.6 1.6 1.6 1.6s1.6-0.6 1.6-1.6v-14.8c0-4.6-3.4-8.4-8-8.4h-7v-1.8c0-0.8-0.4-1.6-1.4-1.6s-1.6 0.6-1.6 1.6v1.8h-27.6v-1.8c0-0.8-0.6-1.6-1.6-1.6s-1.4 0.8-1.4 1.6v1.8h-7c-4.6 0-8.2 3.6-8.2 8.2v43.6c0 4.6 3.6 8.4 8.2 8.4h47.4c4.6 0 8.2-3.8 8.2-8.2v-2.6c-0.2-0.8-1-1.6-1.8-1.6zM8.2 6.6h7v1.8c0.2 0.8 0.8 1.6 1.6 1.6s1.4-0.6 1.6-1.4v-1.8h27.2v1.8c0 0.8 0.6 1.6 1.6 1.6s1.6-0.6 1.6-1.6v-1.6h7.4c2.8 0.2 4.8 2.4 4.8 5.4v6.6h-57.6v-6.8c-0.4-3 2-5.8 4.8-5.6z"></path>
+                <path d="M63.2 39.2l-6.4-8.2c-0.6-0.6-1.4-0.8-2.2 0-0.6 0.6-0.6 1.4-0.2 2l4.6 6h-17c-0.8 0-1.4 0.4-1.6 1.4 0 1 0.8 1.6 1.6 1.6h17.2l-4.8 6c-0.4 0.6-0.4 1.2 0 2 0.2 0.2 0.8 0.4 1.2 0.4s0.8 0 1.2-0.4l6.4-8.2c0.2-0.2 0.6-0.8 0.6-1.2v0c0-0.8-0.2-1-0.6-1.4z"></path>
+            </symbol>
+            <symbol id="icon-last-viewed" viewBox="0 0 64 64">
+                <title>last-viewed</title>
+                <path d="M32 24.4c-4 0-7.4 3.4-7.4 7.6s3.2 7.6 7.4 7.6c4 0 7.4-3.4 7.4-7.6s-3.4-7.6-7.4-7.6z"></path>
+                <path d="M0.2 30.8v2.6c14.8 25.2 49 25.2 63.8 0v-2.6c-14.6-25.2-49-25.2-63.8 0zM32 47.2c-8.2 0-14.8-6.8-14.8-15.2s6.8-15.2 14.8-15.2 14.8 6.8 14.8 15.2-6.4 15.2-14.8 15.2z"></path>
+            </symbol>
+            <symbol id="icon-questions" viewBox="0 0 64 64">
+                <title>questions</title>
+                <path d="M32 0c-17.6 0-32 13.8-32 30.6 0 8.2 3.2 15.8 9.2 21.4 0.2 4-1.4 5.8-2.6 7.2-0.8 1-1.8 2-1.4 3.6 0.2 0.8 0.8 1.2 1.6 1.2 0 0 0 0 0 0 7.2-0.2 15.2-1.6 19-3.4 2 0.4 4.2 0.6 6.2 0.6 17.6 0 32-13.8 32-30.6s-14.4-30.6-32-30.6zM32 58.2c-2 0-4-0.2-6.2-0.6-0.4 0-0.6 0-1 0.2-2.4 1.2-8.8 2.8-15.6 3.2 1.4-1.6 3.4-4.4 3-9.6 0-0.4-0.2-0.8-0.4-1-5.8-5.4-8.8-12.4-8.8-19.8 0-15.2 13-27.6 29-27.6s29 12.4 29 27.6-13 27.6-29 27.6z"></path>
+                <path d="M33.4 13.8c0 0-0.2 0 0 0-2.4 0-4.6 1-6.4 2.6s-2.6 4-2.6 6.4c0 0.6 0.6 1.2 1.4 1.2 0.6 0 1.4-0.6 1.4-1.2 0-1.8 0.6-3 1.8-4.4 1.2-1.2 2.8-1.8 4.6-1.8 3.2 0.2 5.6 2.4 5.8 6 0 2.4-0.8 4-2.8 5.2-3 2-5.6 5.6-5.6 9.2v3.2c0 0.6 0.8 1.2 1.4 1.2s1.4-0.8 1.4-1.4v-3.2c0-3 2-5.4 4.2-6.8 2.6-1.6 4.2-4.6 4-7.6 0-4.6-3.8-8.6-8.6-8.6z"></path>
+                <path d="M34.4 46.4c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
+            </symbol>
+            <symbol id="icon-star-1" viewBox="0 0 64 64">
+                <title>star-1</title>
+                <path d="M63.4 24.6l-22-3.4-9.6-21.2-9.2 21.2-22 3.4 16 15.6-3.8 23.8 19-12 19.4 12-3.8-23.8z"></path>
+            </symbol>
+            <symbol id="icon-search-box" viewBox="0 0 64 64">
+                <title>search-box</title>
+                <path d="M63.6 61.4l-15.8-15.8c4.4-5 6.8-11.4 6.8-18.2 0-7.4-2.8-14.2-8-19.4s-12-8-19.4-8c-7.2 0-14.2 3-19.2 8s-8 12-8 19.4c0 7.4 2.8 14.2 8 19.4s12 8 19.4 8c6.8 0 13.4-2.6 18.4-7.2l15.6 15.8c0.2 0.2 0.6 0.4 1 0.4s0.8-0.2 1-0.4c0.8-0.4 0.8-1.4 0.2-2zM10 44.8c-4.6-4.6-7.2-10.8-7.2-17.2 0-6.6 2.6-12.6 7.2-17.2s10.8-7.2 17.2-7.2c6.6 0 12.6 2.6 17.2 7.2s7.2 10.8 7.2 17.2c0 6.6-2.6 12.6-7.2 17.2-4.4 4.6-10.6 7.2-17 7.2-6.6 0-12.8-2.6-17.4-7.2z"></path>
+            </symbol>
+            <symbol id="icon-thin-arrow-left" viewBox="0 0 64 64">
+                <title>thin-arrow-left</title>
+                <path d="M48.4 31l-30.6-30.6c-0.6-0.6-1.6-0.6-2.2 0s-0.4 1.6 0 2.2l29.6 29.4-29.6 29.4c-0.6 0.6-0.6 1.6 0 2.2 0.4 0.2 0.8 0.4 1.2 0.4s0.8-0.2 1-0.4l30.4-30.4c0.6-0.8 0.6-1.6 0.2-2.2z"></path>
+            </symbol>
+            <symbol id="icon-thin-arrow-down" viewBox="0 0 64 64">
+                <title>thin-arrow-down</title>
+                <path d="M63.6 15.6c-0.6-0.6-1.6-0.6-2.2 0l-29.4 29.6-29.4-29.6c-0.6-0.4-1.6-0.4-2.2 0s-0.6 1.6 0 2.2l30.4 30.4c0.2 0.2 0.6 0.4 1 0.4s0.8-0.2 1-0.4l30.8-30.4c0.6-0.6 0.6-1.6 0-2.2z"></path>
+            </symbol>
+            <symbol id="icon-travelers" viewBox="0 0 64 64">
+                <title>travelers</title>
+                <path d="M52.6 27c2.2-1.4 3.6-4 3.6-6.8 0.2-4.6-3.6-8.2-8.2-8.2s-8.4 3.6-8.4 8.2c0 2.8 1.4 5.4 3.6 6.8-2.2 1.2-4.4 3.2-6.4 5.8-2.8-3.8-6-6.4-9.4-7.8 3-2 5.2-5.6 5.2-9.6 0-6.2-5.2-11.4-11.4-11.4s-11.2 5-11.2 11.4c0 4.4 2.4 8.2 6 10-3.4 1.8-6.8 5-9.6 9.4-4 6.2-6.4 13.8-6.4 19.8 0 5.2 16 5.8 23 5.8 5.4 0 10.6-0.4 14.2-1 3.2-0.6 7.6-1.8 7.6-4.8 0-1 0-2-0.2-3 1 0 2.4 0 3.8 0 5.4 0 12.4-0.4 14.6-2.6 0.8-0.6 0.8-1.4 0.8-1.8 0-6.8-4.6-16.8-11.2-20.2zM42.8 20.2c0-2.8 2.4-5.2 5.4-5.2s5.4 2.4 5.4 5.2c0 2.8-2.4 5.2-5.4 5.2s-5.4-2.4-5.4-5.2zM13 15.4c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4-8.4-3.8-8.4-8.4zM28 57.4c-13.2 0.6-24-1.4-25-2.8 0-10.8 8.8-27.8 19.4-27.8 10.4 0 19.4 17 19.4 27.8-0.4 0.6-3.6 2.2-13.8 2.8zM44.4 48.6c-1-4.6-3-9.4-5.4-13.4 2.6-4 5.8-6.4 9-6.4 6.8 0 12.6 11 12.8 18.2-1.2 1-8 2-16.4 1.6z"></path>
+            </symbol>
+            <symbol id="icon-youtube" viewBox="0 0 64 64">
+                <title>youtube</title>
+                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+                <path fill="#fff" d="M 45,24 27,14 27,34"></path>
+            </symbol>
+        </defs>
+    </svg>
+    <header class="l-siteHeader">
+        <div class="l-container l-container--narrow">
+            <a class="l-siteHeader_logo line-separate" href="/">
+                <img src="//cdn6.agoda.net/images/MVC/default/agoda-logo.png" title="Agoda" alt="Agoda">
+            </a>
+            <nav class="c-site-nav">
+                <ul>
+                    <li class="c-site-nav_item c-site-nav_item_active">
+                        <a href="#1">rooms</a>
+                    </li>
+                    <li class="c-site-nav_item">
+                        <a href="#2">Flisghts</a>
+                    </li>
+                    <li class="c-site-nav_item">
+                        <a href="#3">Today's deals</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <ul class="c-user-menu">
+                <li class="c-user-menu_item c-user-menu_feedback">
+                    <button class="c-user-menu_button selected" type="button">
+                        <svg class="c-user-menu_feedback_icon icon icon-questions" role="presentation">
+                            <use xlink:href="#icon-questions"></use>
+                        </svg>
+                    </button>
+                    <ul class="c-user-menu_submenu">
+                        <li>
+                            <a href="#4">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#5">Website feedback</a>
+                        </li>
+                        <li>
+                            <a href="#6">FAQs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="c-user-menu_item c-user-menu_pointsmax line-separate">
+                    <button class="c-user-menu_button" type="button">
+                        <img src="//cdn6.agoda.net/images/mvc/PointsMAX/ROP/ThaiAirways-RoyalOrchidPlus-smalllogo-desktop_v1@2x.png" alt="Thai Airways Royal Orchid Plus">
+                    </button>
+                    <ul class="c-user-menu_submenu">
+                        <li>
+                            <a href="#">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#">Website feedback</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="c-user-menu_item c-user-menu_currency line-separate">
+                    <button class="c-user-menu_button" type="button">
+                        USD
+                    </button>
+                    <ul class="c-user-menu_submenu">
+                        <li>
+                            <a href="#">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#">Website feedback</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="c-user-menu_item c-user-menu_account">
+                    <button class="c-user-menu_button" type="button">
+                        <span class="c-user-menu_account_user_icon">
+                            <i class="c-user-menu_account_user_icon_badge">
+                                R
+                            </i>
+                            <span class="c-user-menu_account_user_icon_noti">14</span>
+                        </span>
+                        <span class="c-user-menu_account_user-name">Rarun R.</span>
+                        <svg class="c-user-menu_account_icon icon icon-arrow-down" role="presentation">
+                            <use xlink:href="#icon-arrow-down"></use>
+                        </svg>
+                    </button>
+                    <ul class="c-user-menu_submenu">
+                        <li>
+                            <a href="#">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#">Website feedback</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+    <main>
+        <section class="c-hero-banner" style=" background-image: url('https://cdn6.agoda.net/images/MVC/default/background_image/Alila-Villas-Uluwatu_1920.jpg?p=true');">
+            <div class="c-hero-banner__container l-container l-container--narrow">
+                <h2 class="c-hero-banner__title">Book [hotels] online</h2>
+                <p class="c-hero-banner__text">Deep discounts on 2,000,000+ properties, worldwide</p>
+                <div class="c-hero-banner__tab c-tab">
+                    <ul class="c-tab-nav">
+                        <li class="active">
+                            <a href="">Hotels</a>
+                        </li>
+                        <li>
+                            <a href="#flights">Flights</a>
+                        </li>
+                    </ul>
+                    <div class="c-tab_content">
+                        <div class="c-tab_content_item">
+                            <div class="c-searchbox">
+                                <div class="c-searchbox__item c-searchbox__item--destination">
+                                    <div class="c-searchbox__box">
+                                        <div class="c-searchbox__box__child">
+                                            <svg class="c-searchbox__icon icon icon-search-box" role="presentation">
+                                                <use xlink:href="#icon-search-box"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="c-searchbox__box__child">
+                                            <label class="c-searchbox__label vh" for="search-destination">Bangkok</label>
+                                            <input class="c-searchbox__field c-searchbox__item--destination__field" type="text" placeholder="Bangkok"  id="search-destination" >
+                                            <ul class="c-searchbox__submenu" style="display:none;">
+                                                <li class="c-searchbox__submenu-item">
+                                                    <a class="c-searchbox__submenu-anchor" href="#">
+                                                        <svg class="c-searchbox__icon icon icon-last-viewed" role="presentation">
+                                                            <use xlink:href="#icon-last-viewed"></use>
+                                                        </svg>
+                                                        <span>Prince Palace Hotel, Bangkok, Thailand bla bla bla bla bla</span>
+                                                        <span>19 Jan 2018 - 22 Jan 2018</span>
+                                                    </a>
+                                                </li>
+                                                <li class="c-searchbox__submenu-item">
+                                                    <a class="c-searchbox__submenu-anchor" href="#">
+                                                        <svg class="c-searchbox__icon icon icon-last-viewed" role="presentation">
+                                                            <use xlink:href="#icon-last-viewed"></use>
+                                                        </svg>
+                                                        <span>Prince Palace Hotel, Bangkok, Thailand bla bla bla bla bla</span>
+                                                        <span>19 Jan 2018 - 22 Jan 2018</span>
+                                                    </a>
+                                                </li>
+                                                <li class="c-searchbox__submenu-item">
+                                                    <a class="c-searchbox__submenu-anchor" href="#">
+                                                        <svg class="c-searchbox__icon icon icon-last-viewed" role="presentation">
+                                                            <use xlink:href="#icon-last-viewed"></use>
+                                                        </svg>
+                                                        <span>Prince Palace Hotel, Bangkok, Thailand bla bla bla bla bla</span>
+                                                        <span>19 Jan 2018 - 22 Jan 2018</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-searchbox__item c-searchbox__item--checkdate">
+                                    <div class="c-searchbox__box c-searchbox__item--checkdate__in">
+                                        <div class="c-searchbox__box__child">
+                                            <svg class="c-searchbox__icon icon icon-check-in" role="presentation">
+                                                <use xlink:href="#icon-check-in"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="c-searchbox__box__child c-searchbox__item--checkdate__value">
+                                            <label class="c-searchbox__label vh" for="search-datein">28 Nov 2017</label>
+                                            <input class="c-searchbox__field" type="text" placeholder="28 Nov 2017" id="search-datein">
+                                            <span>Tuesday</span>
+                                        </div>
+                                    </div>
+                                    <div class="c-searchbox__box c-searchbox__item--checkdate__out">
+                                        <div class="c-searchbox__box__child">
+                                            <svg class="c-searchbox__icon icon icon-check-out" role="presentation">
+                                                <use xlink:href="#icon-check-out"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="c-searchbox__box__child c-searchbox__item--checkdate__value">
+                                            <label class="c-searchbox__label vh" for="search-dateout">28 Nov 2017</label>
+                                            <input class="c-searchbox__field" type="text" placeholder="28 Nov 2017" id="search-dateout">
+                                            <span>Tuesday</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-searchbox__item">
+                                    <div class="c-searchbox__box">
+                                        <div class="c-searchbox__box__child">
+                                            <svg class="c-searchbox__icon icon icon-travelers" role="presentation">
+                                                <use xlink:href="#icon-travelers"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="c-searchbox__box__child">
+                                            <label class="c-searchbox__label vh" for="search-occupancy">14 adults, 9children</label>
+                                            <input class="c-searchbox__field" type="text" placeholder="14 adults, 9children" id="search-occupancy">
+                                            <span>2 rooms</span>
+                                        </div>
+                                        <div class="c-searchbox__box__child">
+                                            <svg class="c-searchbox__icon icon icon-thin-arrow-down" role="presentation">
+                                                <use xlink:href="#icon-thin-arrow-down"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-searchbox__item c-searchbox__item--action-from">
+                                    <button class="button button--primary" type="submit">SEARCH</button>
+                                </div>
+                            </div>
+                            <div class="c-tab__filter">
+                                <button type="button" class="c-tab__filter-trigger c-tab__filter-trigger--active button">
+                                    Refine your search
+                                    <svg class="c-tab__filter-trigger-icon icon icon-arrow-down" role="presentation">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="c-tab__filter-panel">
+                                    <div class="l-row">
+                                        <div class="l-col-4">
+                                            <div class="c-tab__filter-item">
+                                                <span class="c-tab__filter-title">Price per night</span>
+                                                <div class="c-tab__filter-slider c-slider">
+                                                    <div class="c-slider__bar">
+                                                        <div class="c-slider__bar--filled" style="width: 50%; left: 25%"></div>
+                                                        <span class="c-slider__thumb" style="left: 25%"></span>
+                                                        <span class="c-slider__thumb" style="right: 25%"></span>
+                                                    </div>
+                                                    <span class="c-slider__value">THB 0 - THB 10,500 +</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-col-4">
+                                            <div class="c-tab__filter-item">
+                                                <span class="c-tab__filter-title">Guest rating</span>
+                                                <div class="c-tab__filter-slider c-slider">
+                                                    <div class="c-slider__bar">
+                                                        <div class="c-slider__bar--filled" style="width: 70%; left: 30%"></div>
+                                                        <span class="c-slider__thumb" style="left: 30%"></span>
+                                                    </div>
+                                                    <span class="c-slider__value">6.0 and up</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-col-4">
+                                            <div class="c-tab__filter-item">
+                                                <span class="c-tab__filter-title">Star rating</span>
+                                                <div class="c-star-rating">
+                                                    <ul>
+                                                        <li class="c-star-rating__rate c-star-rating__rate--active">
+                                                            <svg class="c-star-rating__rate-icon icon icon-star-1" role="presentation">
+                                                                <use xlink:href="#icon-star-1"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="c-star-rating__rate c-star-rating__rate--active">
+                                                            <svg class="c-star-rating__rate-icon icon icon-star-1" role="presentation">
+                                                                <use xlink:href="#icon-star-1"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="c-star-rating__rate c-star-rating__rate--active">
+                                                            <svg class="c-star-rating__rate-icon icon icon-star-1" role="presentation">
+                                                                <use xlink:href="#icon-star-1"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="c-star-rating__rate">
+                                                            <svg class="c-star-rating__rate-icon icon icon-star-1" role="presentation">
+                                                                <use xlink:href="#icon-star-1"></use>
+                                                            </svg>
+                                                        </li>
+                                                        <li class="c-star-rating__rate">
+                                                            <svg class="c-star-rating__rate-icon icon icon-star-1" role="presentation">
+                                                                <use xlink:href="#icon-star-1"></use>
+                                                            </svg>
+                                                        </li>
+                                                    </ul>
+                                                    <span class="c-slider__value">7.0 and up</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div id="flights" class="c-tab_content_item">Flights</div>-->
+                    </div>
+                </div>
+                <div class="c-hero-banner__become-host c-become-host">
+                    <img class="c-become-host__logo" src="//cdn6.agoda.net/images/nha/nha-homes.svg" alt="Become a host with Agoda" height="32">
+                    <a class="c-become-host__anchor" href="//ycs.agoda.com/homes/en-us?cid=-1">Become a Host
+                    </a>
+                    <svg class="c-become-host__icon icon icon-thin-arrow-left" role="presentation">
+                        <use xlink:href="#icon-thin-arrow-left"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="c-book-faster">
+            <div class="c-book-faster__container l-container l-container--narrow">
+                <h3 class="c-book-faster__title">Book faster. Book smarter. Book Agoda.</h3>
+                <p class="c-book-faster__text">Driven by our passion for travel, the Agoda team works hard to bring you the cheapest prices on hotels, resorts,
+                    unique homes, vacation rentals, and more. Our huge selection of accommodations will let you plan the
+                    perfect trip. From adventure travel and backpacking to honeymoons and family vacations, we've got you
+                    covered.
+                </p>
+                <a class="c-book-faster__button" href="#c-valprop">WHAT MAKES US BETTER?</a>
+                <section id="c-valprop" class="c-toggle__content" style="display: block;">
+                    <div class="c-val">
+                        <h3 class="vh">WHAT MAKES US BETTER?</h3>
+                        <article class="c-valprop c-valprop--reviews">
+                            <h4 class="c-valprop__title">Over 15,000,000 reviews</h4>
+                            <p class="c-valprop__text">Find the perfect place to stay. Read honest reviews from the Agoda travel community.</p>
+                        </article>
+                        <article class="c-valprop c-valprop--best-price">
+                            <h4 class="c-valprop__title">Best Price Guarantee</h4>
+                            <p class="c-valprop__text">Nobody works harder to get you the best price. And if you find one lower, we'll refund you the difference.
+                            </p>
+                        </article>
+                        <article class="c-valprop c-valprop--customer-services">
+                            <h4 class="c-valprop__title">24/7 customer service</h4>
+                            <p class="c-valprop__text">Available in 17 languages. All day, every day, we're here to help you.</p>
+                        </article>
+                    </div>
+                    <div class="c-carousel">
+                        <div class="c-carousel__item">
+                            <blockquote class="c-carousel__quote">This should be your primary accommodation website for guesthouses and hotels in Asia. They have the most robust
+                                inventory and offer the best rates.
+                            </blockquote>
+                            <img class="c-carousel__quote-logo" src="https://cdn6.agoda.net/images/desktop/home/testimonial/nomadic_matt_grey_logo.svg"
+                                alt="NOMADIC MAT" width="140">
+                        </div>
+                    </div>
+                </section>
+                <div class="c-book-faster__video c-video">
+                    <div class="c-video__overlay" style="background-image: url('https://cdn6.agoda.net/images/MVC/default/background_image/Alila-Villas-Uluwatu_1920.jpg');">
+                        <button class="c-video__play" aria-label="Play" type="button">
+                            <svg class="c-video__icon icon icon-youtube" role="presentation">
+                                <use xlink:href="#icon-youtube"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="c-video__title">
+                        <a class="c-video__title-anchor" href="https://youtu.be/eVs9HLhjNn8">#agodabasecamp -45s</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="c-recently-viewed">
+            <div class="l-container l-container--narrow">
+                <h3 class="c-recently-viewed__title">Recently viewed properties</h3>
+                <ul class="l-row">
+                    <li class="l-col-3">
+                        <div class="c-recently-viewed__property property-card">
+                            <figure class="property-card__image" role="group">
+                                <img src="//pix6.agoda.net/hotelImages/115/1157832/1157832_15123003070038795515.jpg?s=450x450" alt="Amranta">
+                            </figure>
+                            <div class="property-card__detail">
+                                <ul class="property-card__title-info">
+                                    <li class="property-card__hotel-name">
+                                        <h4>Amaranta</h4>
+                                    </li>
+                                    <li class="property-card__hotel-locate">Bangkok, Thailand</li>
+                                    <li class="property-card__hotel-raiting">
+                                        <ul >
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star c-star--nha">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-recently-viewed__property-footer">
+                                <ul class="c-recently-viewed__property-search">
+                                    <li>19 Jan - 22 Jan 2018</li>
+                                    <li>1 room, 1 adult</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-viewed__property property-card">
+                            <figure class="property-card__image" role="group">
+                                <img src="//pix6.agoda.net/hotelImages/115/1157832/1157832_15123003070038795515.jpg?s=450x450" alt="Amranta">
+                            </figure>
+                            <div class="property-card__detail">
+                                <ul class="property-card__title-info">
+                                    <li class="property-card__hotel-name">
+                                        <h4>Amaranta</h4>
+                                    </li>
+                                    <li class="property-card__hotel-locate">Bangkok, Thailand</li>
+                                    <li class="property-card__hotel-raiting">
+                                        <ul >
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star c-star--nha">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-recently-viewed__property-footer">
+                                <ul class="c-recently-viewed__property-search">
+                                    <li>19 Jan - 22 Jan 2018</li>
+                                    <li>1 room, 1 adult</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-viewed__property property-card">
+                            <figure class="property-card__image" role="group">
+                                <img src="//pix6.agoda.net/hotelImages/115/1157832/1157832_15123003070038795515.jpg?s=450x450" alt="Amranta">
+                            </figure>
+                            <div class="property-card__detail">
+                                <ul class="property-card__title-info">
+                                    <li class="property-card__hotel-name">
+                                        <h4>Amaranta</h4>
+                                    </li>
+                                    <li class="property-card__hotel-locate">Bangkok, Thailand</li>
+                                    <li class="property-card__hotel-raiting">
+                                        <ul>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star c-star--nha">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-recently-viewed__property-footer">
+                                <ul class="c-recently-viewed__property-search">
+                                    <li>19 Jan - 22 Jan 2018</li>
+                                    <li>1 room, 1 adult</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-viewed__property property-card">
+                            <figure class="property-card__image" role="group">
+                                <img src="//pix6.agoda.net/hotelImages/115/1157832/1157832_15123003070038795515.jpg?s=450x450" alt="Amranta">
+                            </figure>
+                            <div class="property-card__detail">
+                                <ul class="property-card__title-info">
+                                    <li class="property-card__hotel-name">
+                                        <h4>Amaranta</h4>
+                                    </li>
+                                    <li class="property-card__hotel-locate">Bangkok, Thailand</li>
+                                    <li class="property-card__hotel-raiting">
+                                        <ul >
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                            <li class="c-star c-star--nha">
+                                                <svg class="c-star__icon icon icon-star-1" role="presentation">
+                                                    <use xlink:href="#icon-star-1"></use>
+                                                </svg>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-recently-viewed__property-footer">
+                                <ul class="c-recently-viewed__property-search">
+                                    <li>19 Jan - 22 Jan 2018</li>
+                                    <li>1 room, 1 adult</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="c-recently-search">
+            <div class="c-recently-search__container l-container l-container--narrow">
+                <h3 class="c-recently-search__title">Recently search</h3>
+                <ul class="l-row c-recently-search__list">
+                    <li class="l-col-3">
+                        <div class="c-recently-search__item">
+                            <div class="c-recently-search__overlay overlay">
+                                <img class="overlay__bg" src="//pix6.agoda.net/city/5085/5085-4x3.jpg?s=412x308&p=true&cachebuster=true" alt="Tokyo">
+                                <a class="overlay__backdrop" href="//www.agoda.com/pages/agoda/default/DestinationSearchResult.aspx?city=5085&checkIn=2017-12-20&los=1&rooms=1&adults=1&children=0">
+                                    <div class="overlay__caption">
+                                        <h4 class="overlay__caption-title">Tokyo
+                                            <span class="overlay__caption-item">Japan</span>
+                                        </h4>
+                                        <p class="overlay__caption-desc">
+                                            <span class="overlay__caption-item">20 Dec - 21 Dec 2017</span>
+                                            <span class="overlay__caption-item">1 room, 1 adult</span>
+                                            <span class="overlay__caption-item">8,648 properties</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-search__item">
+                            <div class="c-recently-search__overlay overlay">
+                                <img class="overlay__bg" src="//pix6.agoda.net/city/9395/9395-4x3.jpg?s=412x308&p=true&cachebuster=true" alt="Bangkok">
+                                <a class="overlay__backdrop" href="//www.agoda.com/city/bangkok-th.html">
+                                    <div class="overlay__caption">
+                                        <h4 class="overlay__caption-title">Bangkok
+                                            <span class="overlay__caption-item">Thailand</span>
+                                        </h4>
+                                        <p class="overlay__caption-desc">
+                                            <span class="overlay__caption-item">20 Dec - 21 Dec 2017</span>
+                                            <span class="overlay__caption-item">1 room, 1 adult</span>
+                                            <span class="overlay__caption-item">8,648 properties</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-search__item">
+                            <div class="c-recently-search__overlay overlay">
+                                    <img class="overlay__bg" src="//pix6.agoda.net/city/5085/5085-4x3.jpg?s=412x308&p=true&cachebuster=true" alt="Tokyo">
+                                    <a class="overlay__backdrop" href="//www.agoda.com/pages/agoda/default/DestinationSearchResult.aspx?">
+                                    <div class="overlay__caption">
+                                        <h4 class="overlay__caption-title">Tokyo
+                                            <span class="overlay__caption-item">Japan</span>
+                                        </h4>
+                                        <p class="overlay__caption-desc">
+                                            <span class="overlay__caption-item">20 Dec - 21 Dec 2017</span>
+                                            <span class="overlay__caption-item">1 room, 1 adult</span>
+                                            <span class="overlay__caption-item">8,648 properties</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="l-col-3">
+                        <div class="c-recently-search__item">
+                            <div class="c-recently-search__overlay overlay">
+                                <img class="overlay__bg" src="//pix6.agoda.net/city/5085/5085-4x3.jpg?s=412x308&p=true&cachebuster=true" alt="Tokyo">
+                                <a class="overlay__backdrop" href="h//www.agoda.com/pages/agoda/default/DestinationSearchResult.aspx?city=1124&checkIn=2017-12-21&los=1&rooms=1&adults=1&children=0">
+                                    <div class="overlay__caption">
+                                        <h4 class="overlay__caption-title">Tokyo
+                                            <span class="overlay__caption-item">Japan</span>
+                                        </h4>
+                                        <p class="overlay__caption-desc">
+                                            <span class="overlay__caption-item">20 Dec - 21 Dec 2017</span>
+                                            <span class="overlay__caption-item">1 room, 1 adult</span>
+                                            <span class="overlay__caption-item">8,648 properties</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="l-footer">
+            <div class="l-footer__container l-container l-container--narrow">
+                <p>All material herein © 2005–2017 Agoda Company Pte. Ltd. All Rights Reserved.<br/>
+                Agoda is part of The Priceline Group, the world leader in online travel & related services.</p>
+                <ul class="l-footer__partner-list c-partner__list">
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-agoda.svg" alt="Agoda" height="30" width="70">
+                    </li>
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-priceline.svg" alt="Priceline.com" height="20" width="96">
+                    </li>
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-kayak.svg" alt="Kayak" height="20" width="76">
+                    </li>
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-rentalcars.svg" alt="Rentalcars.com" height="20" width="117">
+                    </li>
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-booking.svg" alt="Booking.com" height="20" width="97">
+                    </li>
+                    <li class="c-partner__item">
+                        <img src="//cdn6.agoda.net/images/MVC/default/logo-opentable.svg" alt="Opentable" height="25" width="100">
+                    </li>
+                </ul>
+                <span class="l-footer__server">SG-AGWEB-6A03</span>
+            </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+# spec testing of grid layout
+
+@objects
+    header                  .l-siteHeader
+    hero-banner             .c-hero-banner
+    book-faster             .c-book-faster
+    recently-view           .c-recently-viewed
+    recently-search         .c-recently-search
+    footer                  .l-footer
+
+@groups
+    skeleton-elements       header, hero-banner, book-faster, recently-view, recently-search, footer
+
+= Skeleton =
+    &skeleton-elements:
+        inside screen 0px left right

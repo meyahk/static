@@ -1,0 +1,30 @@
+// ========================================================================
+// COMPONENTS/SITE NAVIGATION
+// ========================================================================
+
+.c-site-nav {
+    display: inline-block;
+    font-size: 13px;
+
+    &_item {
+        display: inline-block;
+        height: 60px;
+
+        &_active {
+            border-bottom: 4px solid #488bf8;
+        }
+
+        a {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        &:hover {
+            a {
+                color: #488bf8;
+            }
+        }
+    }
+}

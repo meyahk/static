@@ -1,0 +1,41 @@
+@import lib/base-rules.gspec
+
+@objects
+    header                          css         .l-siteHeader
+    container                       css         .l-container    
+    site_logo                       css         .l-siteHeader_logo
+    site_navigation                 css         .c-site-nav
+    site_navigation-item-*          css         .c-site-nav > ul > li
+    site_user_menu                  css         .c-user-menu
+    site_user_menu_item-*           css         .c-user-menu > li
+
+
+
+= Header Section =
+    @forEach [ site_navigation-item-* ] as itemName, next as nextItem
+        ${itemName}:
+            left-of ${nextItem} <= 3px
+            css font-size is "13px"
+
+    @forEach [ site_user_menu_item-* ] as itemName, next as nextItem
+        ${itemName}:
+            width >= 44px
+
+    header:
+        width = 100% of screen/width
+        height 55 to 65px
+
+
+
+    container:
+        centered vertically inside header
+
+    site_logo:
+        left-of site_navigation ~ 10px
+
+    site_navigation:
+        near site_user_menu >= 40px left
+
+= e.g. to use rule from libary (should remove) and how to use @on (tagsName) =
+    @on variable
+        | site_logo should be squared

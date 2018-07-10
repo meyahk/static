@@ -1,0 +1,20 @@
+# Overlay
+
+@objects
+    Overlay                             .overlay
+    Overlay-img                         .overlay__bg
+    Overlay-backdrop                    .overlay__backdrop
+    Overlay-caption                     .overlay__caption
+
+@groups
+    Overlay_elements    Overlay-img, Overlay-backdrop
+
+= Overlay =
+    &Overlay_elements:
+        width 100% of Overlay/width
+        height 100% of Overlay/height
+
+    Overlay-caption:
+        width 59 to 90 % of Overlay/width
+
+    

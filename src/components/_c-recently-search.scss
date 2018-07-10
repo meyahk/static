@@ -1,0 +1,60 @@
+// ========================================================================
+// COMPONENTS/RECENTLY SEARCH
+// ========================================================================
+
+.c-recently-search {
+    &__container {
+        margin-top: 65px;
+        margin-bottom: 65px;
+    }
+
+    [class*="l-col-"] {
+        @include ltr {
+            padding-left: spacing(2);
+        }
+
+        @include rtl {
+            padding-right: spacing(2);
+        }
+    }
+
+    .l-col-3 {
+        @media only screen and (max-width: 960px) {
+            width: 50%;
+            padding-bottom: spacing(2);
+        }
+    }
+
+    &__title {
+        @include vr(20px, 1, 1);
+
+        text-align: center;
+    }
+
+    &__item {
+        height: 308px;
+
+        .overlay {
+            &__backdrop {
+                color: #fff;
+            }
+
+            &__caption {
+                min-width: 60%;
+
+                &-title {
+                    font-size: 24px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                > [class^="overlay__caption-"] {
+                    margin-top: spacing(8);
+                    margin-bottom: spacing(8);
+                }
+            }
+        }
+    }
+}

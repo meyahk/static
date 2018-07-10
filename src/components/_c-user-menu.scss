@@ -1,0 +1,190 @@
+// ========================================================================
+// COMPONENTS/USER MENU
+// ========================================================================
+
+.c-user-menu {
+    display: inline-block;
+    font-size: 13px;
+
+    &_item {
+        position: relative;
+        display: inline-block;
+        min-width: 44px;
+        text-align: center;
+    }
+
+    &_button {
+        background: none;
+        border: none;
+
+        &:hover {
+            color: #488bf8;
+
+            svg {
+                fill: #488bf8;
+            }
+        }
+
+        &.selected {
+            color: #488bf8;
+
+            svg {
+                fill: #488bf8;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+
+                @include horizontal-align;
+
+                border-left: 9px solid transparent;
+                border-right: 9px solid transparent;
+            }
+
+            &::before {
+                border-bottom: 9px solid #0283df;
+                top: 52px;
+            }
+
+            &::after {
+                border-bottom: 9px solid #fff;
+                top: 53px;
+                z-index: 2;
+            }
+
+            ~ {
+                .c-user-menu_submenu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &_submenu {
+        display: none;
+        position: absolute;
+        min-width: 212px;
+        padding: 8px 16px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom: 2px solid #0283df;
+        z-index: 1;
+
+        @include ltr {
+            right: -20px;
+            text-align: left;
+        }
+
+        @include rtl {
+            left: -20px;
+            text-align: right;
+        }
+
+        li {
+            line-height: initial;
+            border-bottom: 1px solid #eee;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                display: block;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: #666;
+
+                @include ltr {
+                    padding-left: 10px;
+                }
+
+                @include rtl {
+                    padding-right: 10px;
+                }
+
+                &:hover {
+                    color: #0283df;
+                }
+            }
+        }
+    }
+
+    &_feedback {
+        &_icon {
+            @include box-size-set(20,20);
+
+            fill: #757575;
+        }
+    }
+
+    &_pointsmax {
+        img {
+            @include box-size-set(42,42);
+        }
+    }
+
+    &_account {
+        &_user {
+            &_icon {
+                display: inline-block;
+
+                &_badge {
+                    display: inline-block;
+
+                    @include box-size-set(30,30);
+
+                    background: #8c69ca;
+                    color: #fff;
+                    font-size: 17px;
+                    font-style: normal;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+
+                &_noti {
+                    position: relative;
+                    top: -12px;
+
+                    @include ltr {
+                        left: -10px;
+                    }
+
+                    @include rtl {
+                        right: -10px;
+                    }
+
+                    display: inline-block;
+                    padding: 3px;
+                    min-width: 18px;
+                    background: #e44746;
+                    color: #fff;
+
+                    @include font-size-set(10);
+
+                    border-radius: 9px;
+                    border: 1px solid #fff;
+                }
+            }
+
+            &-name {
+                font-size: 15px;
+
+                @include ltr {
+                    margin-right: 5px;
+                }
+
+                @include rtl {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &_icon {
+            @include box-size-set(12,12);
+        }
+    }
+}

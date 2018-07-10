@@ -1,0 +1,41 @@
+// ========================================================================
+// SETTINGS/FONT-FACE
+// ========================================================================
+
+//==Font, line-height, and color for body text, headings==//
+
+@font-face {
+    font-family: 'mallory';
+    src: url('//cdn0.agoda.net/images/fonts/mallory-light-webfont-v01.eot');
+    src:
+        url('//cdn0.agoda.net/images/fonts/mallory-light-webfont-v01.eot?#iefix') format('embedded-opentype'),
+        url('//cdn0.agoda.net/images/fonts/mallory-light-webfont-v01.woff2') format('woff2'),
+        url('//cdn0.agoda.net/images/fonts/mallory-light-webfont-v01.woff') format('woff'),
+        url('//cdn0.agoda.net/images/fonts/mallory-light-webfont-v01.ttf') format('truetype');
+    font-weight: lighter;// this is normal font - you can use font-weight: lighter
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mallory';
+    src: url('//cdn0.agoda.net/images/fonts/Mallory-Book.eot');
+    src:
+        url('//cdn0.agoda.net/images/fonts/Mallory-Book.eot?#iefix') format('embedded-opentype'),
+        url('//cdn0.agoda.net/images/fonts/Mallory-Book.woff2') format('woff2'),
+        url('//cdn0.agoda.net/images/fonts/Mallory-Book.woff') format('woff'),
+        url('//cdn0.agoda.net/images/fonts/Mallory-Book.ttf') format('truetype');
+    font-weight: normal;// this is Mallory Book style font
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mallory';
+    src: url('//cdn0.agoda.net/images/fonts/mallory-medium.eot');
+    src:
+        url('//cdn0.agoda.net/images/fonts/mallory-medium.eot?#iefix') format('embedded-opentype'),
+        url('//cdn0.agoda.net/images/fonts/mallory-medium.woff2') format('woff2'),
+        url('//cdn0.agoda.net/images/fonts/mallory-medium.woff') format('woff'),
+        url('//cdn0.agoda.net/images/fonts/mallory-medium.ttf') format('truetype');
+    font-weight: bold;// this is our bold font - you can use font-weight: bold
+    font-style: normal;
+}

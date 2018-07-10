@@ -1,0 +1,110 @@
+// ========================================================================
+// COMPONENTS/VAL PROP
+// ========================================================================
+
+.c-valprop {
+    position: relative;
+    width: 33%;
+    padding-bottom: 40px;
+    vertical-align: top;
+
+    @include ie9 {
+        width: 30%;
+    }
+
+    [class*="c-valprop__"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include ltr {
+        margin-right: 10px;
+    }
+
+    @include rtl {
+        margin-left: 10px;
+    }
+
+    border: 1px solid #ddd;
+
+    &:last-child {
+        @include ltr {
+            margin-right: 0;
+        }
+
+        @include rtl {
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #777;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &__title {
+        font-size: 16px;
+        color: #333;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    &::before {
+        content: "";
+        height: 80px;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+
+        @include horizontal-align;
+        @include box-size-set(90,90);
+
+        border-radius: 50%;
+        background-size: 60px 60px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &--reviews {
+        &::before {
+            background-color: #f57070;
+        }
+
+        &::after {
+            background-image: url(https://cdn6.agoda.net/images/desktop/home/value_prop/reviews.svg);
+            background-color: #cf5555;
+        }
+    }
+
+    &--best-price {
+        &::before {
+            background-color: #45c5d4;
+        }
+
+        &::after {
+            background-image: url(https://cdn6.agoda.net/images/desktop/home/value_prop/best_price.svg);
+            background-color: #38a1ad;
+        }
+    }
+
+    &--customer-services {
+        &::before {
+            background-color: #a7e472;
+        }
+
+        &::after {
+            background-image: url(https://cdn6.agoda.net/images/desktop/home/value_prop/customer_service.svg);
+            background-color: #85c150;
+        }
+    }
+}
+

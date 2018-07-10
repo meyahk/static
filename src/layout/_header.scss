@@ -1,0 +1,55 @@
+// ========================================================================
+// LAYOUT/HEADER
+// ========================================================================
+
+.l-siteHeader {
+    .l-container {
+        height: 60px;
+        line-height: 60px;
+        color: #666;
+    }
+
+    &_logo {
+        position: relative;
+    }
+
+    .line-separate {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 40px;
+
+            @include vertical-align;
+
+            @include ltr {
+                right: 0;
+                border-right: 1px solid #eee;
+            }
+
+            @include rtl {
+                left: 0;
+                border-left: 1px solid #eee;
+            }
+        }
+
+        @include ltr {
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+
+        @include rtl {
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+    }
+
+    .c-user-menu {
+        @include ltr {
+            float: right;
+        }
+
+        @include rtl {
+            float: left;
+        }
+    }
+}
