@@ -1,3 +1,2 @@
 # static
 
-yarn install
